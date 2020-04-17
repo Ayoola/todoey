@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todoey/components/task_list.dart';
+import 'package:todoey/components/task_tile.dart';
 
 class TaskScreen extends StatelessWidget {
   @override
@@ -58,43 +60,6 @@ class TaskScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class TaskList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(35.0),
-      children: <Widget>[
-        TaskTile(),
-        TaskTile(),
-        TaskTile(),
-      ],
-    );
-  }
-}
-
-class TaskTile extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        'Buy milk',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 22.0,
-        ),
-      ),
-      trailing: Transform.scale(
-        scale: 1.5,
-        child: Checkbox(
-          value: false,
-          onChanged: (value) {},
-          activeColor: Colors.lightBlueAccent,
-        ),
       ),
     );
   }
