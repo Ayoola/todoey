@@ -12,17 +12,20 @@ class AddTaskModal extends StatelessWidget {
         ),
       ),
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
+        padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
               'Add Task',
+              textAlign: TextAlign.center,
               style: TextStyle(color: Colors.lightBlueAccent, fontSize: 35.0, fontWeight: FontWeight.w500),
             ),
             TextField(
               onSubmitted: (string) {},
               onChanged: (string) {},
               autofocus: true,
+              textAlign: TextAlign.center,
               style: TextStyle(color: Colors.black, fontSize: 22.0),
               decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
@@ -44,7 +47,7 @@ class AddTaskModal extends StatelessWidget {
               onPressed: () {},
               color: Colors.lightBlueAccent,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 110.0),
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Text(
                   'Add',
                   style: TextStyle(color: Colors.white, fontSize: 22.0),
